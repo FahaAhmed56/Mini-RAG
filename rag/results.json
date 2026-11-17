@@ -1,0 +1,201 @@
+{
+ "results": {
+  "keyword": {
+   "lexical": {
+    "recall@1": 0.95,
+    "recall@3": 1.0,
+    "mrr": 0.975
+   },
+   "paraphrase": {
+    "recall@1": 0.35,
+    "recall@3": 0.7,
+    "mrr": 0.5455
+   },
+   "all": {
+    "recall@1": 0.65,
+    "recall@3": 0.85,
+    "mrr": 0.7602
+   }
+  },
+  "tfidf": {
+   "lexical": {
+    "recall@1": 1.0,
+    "recall@3": 1.0,
+    "mrr": 1.0
+   },
+   "paraphrase": {
+    "recall@1": 0.55,
+    "recall@3": 0.7,
+    "mrr": 0.654
+   },
+   "all": {
+    "recall@1": 0.775,
+    "recall@3": 0.85,
+    "mrr": 0.827
+   }
+  },
+  "bm25": {
+   "lexical": {
+    "recall@1": 1.0,
+    "recall@3": 1.0,
+    "mrr": 1.0
+   },
+   "paraphrase": {
+    "recall@1": 0.55,
+    "recall@3": 0.7,
+    "mrr": 0.6459
+   },
+   "all": {
+    "recall@1": 0.775,
+    "recall@3": 0.85,
+    "mrr": 0.823
+   }
+  },
+  "lsa": {
+   "lexical": {
+    "recall@1": 0.95,
+    "recall@3": 1.0,
+    "mrr": 0.975
+   },
+   "paraphrase": {
+    "recall@1": 0.55,
+    "recall@3": 0.7,
+    "mrr": 0.6657
+   },
+   "all": {
+    "recall@1": 0.75,
+    "recall@3": 0.85,
+    "mrr": 0.8204
+   }
+  },
+  "hybrid": {
+   "lexical": {
+    "recall@1": 0.95,
+    "recall@3": 1.0,
+    "mrr": 0.975
+   },
+   "paraphrase": {
+    "recall@1": 0.5,
+    "recall@3": 0.65,
+    "mrr": 0.6257
+   },
+   "all": {
+    "recall@1": 0.725,
+    "recall@3": 0.825,
+    "mrr": 0.8003
+   }
+  }
+ },
+ "lsa_sweep": [
+  [
+   4,
+   0.5952182539682539,
+   0.18117945928913023
+  ],
+  [
+   8,
+   0.7648809523809523,
+   0.3074035915163182
+  ],
+  [
+   12,
+   0.7818154761904762,
+   0.42026278535876915
+  ],
+  [
+   16,
+   0.8103571428571428,
+   0.5203414230710098
+  ],
+  [
+   24,
+   0.8163798701298701,
+   0.6925438678618954
+  ],
+  [
+   32,
+   0.8203571428571429,
+   0.8195078432484864
+  ],
+  [
+   48,
+   0.8154761904761905,
+   0.9390777986495226
+  ],
+  [
+   64,
+   0.8069533586381412,
+   0.9928753513587278
+  ],
+  [
+   68,
+   0.8130238095238095,
+   0.9989863159231175
+  ]
+ ],
+ "misses": {
+  "keyword": [
+   "Which documents are required for booking?",
+   "Can I keep a cat?",
+   "How much does a 1 bedroom flat cost?",
+   "Can I knock down a wall in my flat?",
+   "How do I reserve the elevator for shifting furniture?",
+   "Can my friends stay over for a week?",
+   "When do I get the keys to my flat?",
+   "What do I bring if I live abroad and want to buy?",
+   "How fast is the wifi?",
+   "Is the drinking water filtered?",
+   "What if I miss a quarterly instalment for four months?",
+   "Are there any green energy features?",
+   "Where can my visitors leave their car?",
+   "Are there any activities for residents to meet each other?"
+  ],
+  "tfidf": [
+   "How do I reserve the elevator for shifting furniture?",
+   "Can my friends stay over for a week?",
+   "When do I get the keys to my flat?",
+   "What do I bring if I live abroad and want to buy?",
+   "How fast is the wifi?",
+   "What if I miss a quarterly instalment for four months?",
+   "Are there any green energy features?",
+   "Where can my visitors leave their car?",
+   "Are there any activities for residents to meet each other?"
+  ],
+  "bm25": [
+   "How do I reserve the elevator for shifting furniture?",
+   "Can my friends stay over for a week?",
+   "When do I get the keys to my flat?",
+   "What do I bring if I live abroad and want to buy?",
+   "How fast is the wifi?",
+   "What if I miss a quarterly instalment for four months?",
+   "Are there any green energy features?",
+   "Where can my visitors leave their car?",
+   "Are there any activities for residents to meet each other?"
+  ],
+  "lsa": [
+   "How big is a two bedroom apartment?",
+   "Can I keep a cat?",
+   "How do I reserve the elevator for shifting furniture?",
+   "When do I get the keys to my flat?",
+   "What do I bring if I live abroad and want to buy?",
+   "How fast is the wifi?",
+   "What if I miss a quarterly instalment for four months?",
+   "Are there any green energy features?",
+   "Where can my visitors leave their car?",
+   "Are there any activities for residents to meet each other?"
+  ],
+  "hybrid": [
+   "How big is a two bedroom apartment?",
+   "Can I keep a cat?",
+   "How do I reserve the elevator for shifting furniture?",
+   "Can my friends stay over for a week?",
+   "When do I get the keys to my flat?",
+   "What do I bring if I live abroad and want to buy?",
+   "How fast is the wifi?",
+   "What if I miss a quarterly instalment for four months?",
+   "Are there any green energy features?",
+   "Where can my visitors leave their car?",
+   "Are there any activities for residents to meet each other?"
+  ]
+ }
+}

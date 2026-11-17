@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini-RAG – Retrieval from Scratch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🔎 Mini-RAG</h1>
+    <p>Ask questions about <b>Green Valley Residency</b> (a fictional apartment community). Every answer comes from the knowledge base, with its source.</p>
+  </header>
+
+  <main>
+    <section class="chat">
+      <form id="ask" class="card">
+        <input id="q" placeholder="e.g. Can I keep a cat?" autocomplete="off" />
+        <select id="method" aria-label="retrieval method">
+          <option value="bm25" selected>BM25 (best here)</option>
+          <option value="tfidf">TF-IDF</option>
+          <option value="lsa">LSA embeddings</option>
+          <option value="hybrid">Hybrid (BM25+LSA)</option>
+          <option value="keyword">Keyword match</option>
+        </select>
+        <button>Ask</button>
+      </form>
+      <div id="chips"></div>
+
+      <div class="card" id="answerCard" hidden>
+        <div class="label">Answer</div>
+        <p id="answer"></p>
+        <p class="cite" id="cite"></p>
+      </div>
+
+      <div class="card" id="sourcesCard" hidden>
+        <div class="label">Retrieved passages <small id="methodName"></small></div>
+        <ol id="sources"></ol>
+      </div>
+    </section>
+
+    <aside>
+      <div class="card">
+        <h2>How this answer was made</h2>
+        <ol class="pipeline">
+          <li><b>Query → tokens</b><div id="tokens" class="tokens">–</div></li>
+          <li><b>Retrieve</b> the 5 best chunks from <span id="nChunks"></span> using <span id="mName">BM25</span></li>
+          <li><b>Answer</b>: the sentence that best matches your question <span class="note">(an LLM would write the answer here, from these same passages)</span></li>
+        </ol>
+      </div>
+      <div class="card">
+        <h2>Compare methods <small>(this question)</small></h2>
+        <table id="compare"></table>
+      </div>
+      <div class="card">
+        <h2>Evaluation <small>(40 test questions)</small></h2>
+        <table id="evalTable"></table>
+      </div>
+    </aside>
+  </main>
+
+  <script src="index_data.js"></script>
+  <script src="rag.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
